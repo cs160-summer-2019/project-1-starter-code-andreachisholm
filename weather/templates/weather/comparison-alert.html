@@ -1,15 +1,131 @@
-{% load static %}
+<span style="opacity:0">q</span>{% load static %}
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Comparison - Alert!</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,300i,600,700&display=swap" rel="stylesheet">
+	<title>Comparison</title>
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style-compare.css' %}" />
 
 </head>
 <body>
-	<!-- your comparison interface with alert here -->
+  
+  <div style="margin-top:-100px; z-index:10; position:absolute; width:100%;height:100%; background:black; opacity:0.7;"></div>
+  <!--WEATHER ALERT-->
+    <div class="modal-body">
+      <div class="container-fluid ">
+        <div class="row justify-content-center" style="text-align:center;">
+          <div class="col-xs-10 ">
+            <span class="update">UPDATE</span>
+            <br>
+            <span class="update-type">Your Current Location Has A Severe Weather Update!</span>
+          </div>
+          <div class="col-xs-2">
+            <img style="padding-top:20px; width:20px;" src="/static/weather/img/X.png/">
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+          <div class="col-xs-12">
+            <span class="update-info">Rain in Berkeley, CA</span>
+          </div>
+        </div>
+        <br>
+        
+        <div class="row justify-content-center">
+          <div class="col-xs-6">
+            <img class="update-icon" src=/static/weather/img/rain.png/>
+          </div>
+          <div class="col-xs-6">
+            <span class="update-temp">68&#176;F</span>
+          </div>
+        </div>
+        
+        <br>
+        
+        <div class="row">
+          <div class="col-xs-12 ml-auto">
+            <a style="color:#FFF;" href="/weather/comparison/"><button class="btn btn-primary btn-sm" type="button">View &nbsp;<img style="width:10px;" src="/static/weather/img/arrow.png/"</button></a>
+          </div>
+        </div>
+        
+       
+      </div>
+    </div>
+      
+      
+	<div class="container-fluid" id="top-menu">
+    <div class="row justify-content-between">
+      <div class="col-xs-3">
+        <img src="/static/weather/img/hamburger.png" class="icon">
+      </div>
+      
+      <div class="col-xs-6">
+        <h1>
+          COMPARE
+        </h1>
+      </div>
+      
+      <div class="col-xs-3">
+        <img style="width:100px;" src="/static/weather/img/pencil.png">
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  
+  <div class="container">
+    <div class="row compare-card">
+      <div class="col-xs-2">
+        <img style="padding-top:60px;"class="compare-icon" src="/static/weather/img/rain.png">
+      </div>
+      <div class="col-xs-10" style="padding-top:50px; padding-left:50px;">
+        <h2>Berkeley, CA</h2>
+        <h2>68&#176;F</h2>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  
+  <div class="container">
+    <div class="row compare-card">
+      <div class="col-xs-2">
+        <img class="compare-icon" src="/static/weather/img/cloud-compare.png" style="padding-top:70px;">
+      </div>
+      <div class="col-xs-10" style="padding-top:50px; padding-left:50px;">
+        <h2 style="font-size:50px; font-weight:bold;">San Francisco, CA</h2>
+        <h2>62&#176;F</h2>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img id="wheel" src="/static/weather/img/wheel.png">
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <span class="curr-time">10AM</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <span class="curr-date">JUL 1</span>
+      </div>
+    </div>
+  </div>
+   
 </body>
 </html>

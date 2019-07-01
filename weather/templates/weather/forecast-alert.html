@@ -3,14 +3,224 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Forecast - Alert!</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,300i,600,700&display=swap" rel="stylesheet">
+	<title>Forecast</title>
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style-forecast.css' %}" />
 
 </head>
 <body>
-	<!-- your single-location forecast with alert interface here -->
+    <div style="z-index:10; position:absolute; width:100%;height:100%; background:black; opacity:0.7;"></div>
+  
+  
+    <div class="modal-body">
+      <div class="container-fluid ">
+        <div class="row justify-content-center" style="text-align:center;">
+          <div class="col-xs-10 ">
+            <span class="update">UPDATE</span>
+            <br>
+            <span class="update-type">A City You Are Comparing Has A Severe Weather Update!</span>
+          </div>
+          <div class="col-xs-2">
+            <img style="padding-top:20px; width:20px;" src="/static/weather/img/X.png/">
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+          <div class="col-xs-12">
+            <span class="update-info">Overcast in San Francisco, CA</span>
+          </div>
+        </div>
+        <br>
+        
+        <div class="row justify-content-center">
+          <div class="col-xs-6">
+            <img class="update-icon" src=/static/weather/img/cloud-compare.png/>
+          </div>
+          <div class="col-xs-6">
+            <span class="update-temp">62&#176;F</span>
+          </div>
+        </div>
+        
+        <br>
+        
+        <div class="row">
+          <div class="col-xs-12 ml-auto">
+            <a style="color:#FFF;" href="/weather/comparison/"><button class="btn btn-primary btn-sm" type="button">View &nbsp;<img style="width:10px;" src="/static/weather/img/arrow.png/"</button></a>
+          </div>
+        </div>
+        
+       
+      </div>
+    </div>
+  
+  
+  
+  <!--TOP MENU-->
+	<div class="container-fluid" id="top-menu">
+    <div class="row justify-content-between">
+      <div class="col-xs-6">
+        <img src="/static/weather/img/hamburger.png" class="icon">
+      </div>
+      
+      <div class="col-xs-6">
+        <img src="/static/weather/img/star.png" class="icon">
+        <a href="/weather/comparison/"><img src="/static/weather/img/compare.png" class="icon"></a>
+        <img src="/static/weather/img/schedule.png" class="icon">
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  
+  
+  <!--MAIN DEGREES-->
+  <div class="container-fluid">
+    <div class="row align-items-start" style="padding-left:50px;">
+      <div class="col-xs-12">
+        <span class="main-deg">74&#176;F</span>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!--MAIN CITY-->
+  <div class="container-fluid">
+    <div class="row justify-content-end" style="padding-right:50px; padding-top:250px;">
+      <div class="col-xs-4" style="padding-top:30px; padding-bottom:20px;">
+        <span class="main-city">
+          Berkeley, CA
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <!--HOURLY FORECAST-->
+  <div class="container-fluid" style="padding-top:100px; padding-left:50px; padding-right:50px; color:#fff;">
+    <div class="row justify-content-between" style="font-size:25px; vertical-align:middle; text-align:center;">
+      <div class="col-xs-1 prev-hour-text">
+        <img class="prev-hour-icon" src="/static/weather/img/cloudy-small-transp.png">
+        <br>
+        <span class="hour-deg">74&#176;F</span>
+        <br>
+        <span>8AM</span>
+      </div>
+      <div class="col-xs-1 prev-hour-text">
+        <img class="prev-hour-icon" src="/static/weather/img/cloudy-small-transp.png">
+        <br>
+        <span class="hour-deg">74&#176;F</span>
+        <br>
+        <span>9AM</span>
+      </div>
+      <div class="col-xs-1 prev-hour-text">
+        <img class="prev-hour-icon" src="/static/weather/img/sun-small-transp.png">
+        <br>
+        <span class="hour-deg">74&#176;F</span>
+        <br>
+        <span>10AM</span>
+      </div>
+      <div class="col-xs-6 curr-hour-text">
+        <img class="curr-hour-icon" src="/static/weather/img/sun-large.png">
+        <br>
+        <span class="hour-deg">74&#176;F</span>
+        <br>
+        <span>NOW</span>
+      </div>
+      <div class="col-xs-1 next-hour-text">
+        <img class="next-hour-icon" src="/static/weather/img/sun-small.png">
+        <br>
+        <span class="hour-deg">74&#176;F</span>
+        <br>
+        <span>11AM</span>
+      </div>
+      <div class="col-xs-1 next-hour-text">
+        <img class="next-hour-icon" src="/static/weather/img/sun-small.png">
+        <br>
+        <span class="hour-deg">74&#176;F</span>
+        <br>
+        <span>12PM</span>
+      </div>
+      <div class="col-xs-1 next-hour-text">
+        <img class="next-hour-icon" src="/static/weather/img/sun-small.png">
+        <br>
+        <span class="hour-deg">74&#176;F</span>
+        <br>
+        <span>1PM</span>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+  <br> 
+  
+  <!--RELAX ZONES-->
+  <div class="container-fluid">
+    <div class="row" style="padding-left:50px;">
+      <div class="col-xs-12">
+        <h2>
+          RELAX
+        </h2>
+      </div>
+    </div>
+    
+    <!-- COLUMN LABELS-->
+    <div class="container-fluid">
+      <div class="row justify-content-between" style="padding-left:18px; font-size:20px; color:#FFF; font-weight:400;">
+        <div class="col-xs-8">
+          <h3>
+            Location
+          </h3>
+        </div>
+        <div class="col-xs-4" style="text-align:right;">
+          <h3>
+            Busy Level
+          </h3>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    
+    <!--LOCATION 1: MEMORIAL GLADE-->
+    <div class="row" style="padding-left:50px;">
+      <div class="col-xs-2">
+        <img src="/static/weather/img/glade.png" style="width:150px; padding-right:20px;">
+      </div>
+      <div class="col-xs-6" style="width:600px;">
+        <span class="relax-location">Memorial Glade</span>
+        <br>
+        <span class="activities">Picnic, Reading, Napping, Frisbee, <br>Spikeball, Football</span>
+      </div>
+      <div class="col-xs-4 justify-content-end" style="width:100px;">
+        <img src="/static/weather/img/person.png" style="width:30px; padding-top:50px;">
+        <img src="/static/weather/img/person.png" style="width:30px; padding-top:50px; margin-left:10px;">
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    
+    <!--LOCATION 2: BERKELEY MARINA-->
+    <div class="row" style="padding-left:50px;">
+      <div class="col-xs-2">
+        <img src="/static/weather/img/marina.png" style="width:150px; padding-right:20px;">
+      </div>
+      <div class="col-xs-6" style="width:600px">
+        <span class="relax-location">Berkeley Marina</span>
+        <br>
+        <span class="activities">Strolling, Picnic, Photography, <br>Boating, Fishing</span>
+      </div>
+      <div class="col-xs-4 justify-content-end" style="width:100px;">
+        <img src="/static/weather/img/person.png" style="width:30px; padding-top:50px;">
+        
+      </div>
+    </div>
+    
 </body>
 </html>
 

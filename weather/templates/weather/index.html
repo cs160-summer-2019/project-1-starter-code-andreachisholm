@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="stylesheet">
 	<title>Current Weather</title>
-	
+  
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
 
@@ -12,17 +13,68 @@
 <body>
 
 	<!-- replace this html -->
-	<div class="container">
-		<div class="jumbotron text-light bg-primary">
-			<h1>Congratulations</h1>
-			<p>You've set your environment up correctly!</p>
-		</div>
-
-		<a href="/weather/forecast/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Forecast</a>
-		<a href="/weather/forecast/alert/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Forecast with alert</a>
-		<a href="/weather/comparison/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Comparison</a>
-		<a href="/weather/comparison/alert/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Comparison with alert</a>
-	</div>
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 ml-auto">.col-md-3 .ml-auto</div>
+        <div class="col-md-2 ml-auto">.col-md-2 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-9">
+          Level 1: .col-sm-9
+          <div class="row">
+            <div class="col-8 col-sm-6">
+              Level 2: .col-8 .col-sm-6
+            </div>
+            <div class="col-4 col-sm-6">
+              Level 2: .col-4 .col-sm-6
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+	<div class="container" id="main-menu">
+    <div class="row">
+      <div class="col-xs-8 hmburger">
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-secondary btn-lg" type="button" id="search">Search</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="/weather/forecast/" class="btn btn-primary btn-lg active hmburger-btn" role="button" aria-pressed="true">Current</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="/weather/comparison/" class="btn btn-primary btn-lg active hmburger-btn" role="button" aria-pressed="true">Schedule</a>
+          </div>        
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-primary btn-lg hmburger-btn" type="button">Compare</button>
+          </div>        
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-primary btn-lg hmburger-btn" type="button">Favorites</button>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </div>
 	
 	<!-- /replace this html -->
 </body>

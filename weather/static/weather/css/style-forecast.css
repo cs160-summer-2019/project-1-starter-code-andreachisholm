@@ -1,0 +1,209 @@
+
+
+body {
+  background-image: url("../img/background-blur.jpg");
+  background-size: 100%;
+  font-family: "Nunito", sans-serif;
+}
+
+
+.hmburger-btn {
+  margin: 10px 40px;
+  
+  width: 80%;
+  height: 100px;
+  font-size: 40px;
+}
+
+#search {
+  margin: 30px 40px;
+  width: 80%;
+  height: 40px;
+  font-size: 12px;
+}
+
+.hmburger {
+  background-color: #fff;
+}
+
+
+
+.icon {
+  width: 70px;
+  height: 70px;
+  margin: 20px;
+}
+
+#top-menu {
+  padding-top: 30px;
+}
+
+.main-deg {
+  
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 170px;
+  line-height: 95px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.35);
+}
+
+.main-city {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 90px;
+  line-height: 48px;
+  color: #FFFFFF;
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.35);
+}
+
+h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 70px;
+  
+  
+  color: #FFF;
+}
+
+.relax-location {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 55px;
+ 
+
+  color: #FFFFFF;
+}
+
+.activities {
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: 300i;
+  font-size: 27px;
+  line-height: 35px;
+
+  color: #FFFFFF;
+
+}
+
+
+.modal-body {
+  position: absolute;
+  width: 600px;
+  height: 440px;
+  left: 190px;
+  top: 500px;
+  z-index:10;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+}
+
+.prev-hour-icon {
+  width: 90px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.curr-hour-icon {
+  width: 130px;
+
+}
+
+.next-hour-icon {
+  width: 90px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.prev-hour-text {
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 27px;
+  line-height: 34px;
+
+  color: #FFFFFF;
+
+  opacity: 0.7;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+
+.curr-hour-text {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 39px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+.next-hour-text {
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 27px;
+  line-height: 34px;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+.update {
+  font-family: Nunito;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.update-type {
+  font-family: Nunito;
+  font-style: italic;
+  font-weight: 300i;
+  font-size: 20px;
+}
+
+.update-info {
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.update-temp {
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 60px;
+  
+  padding-left: 30px;
+}
+
+.update-icon {
+  width:150px;
+}
+
+.btn-primary {
+  background-color: #B3DFF8;
+  border-color: #B3DFF8;
+  height: 60px;
+  width: 120px;
+  font-size:30px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #C4E5F8;
+  border-color: #C4E5F8;
+  height: 60px;
+  width: 120px;
+  font-size:30px;
+  text-align: center;
+}
